@@ -33,7 +33,7 @@ public class Comunicacion extends Observable implements Runnable{
     public void run() {
         if(!conectado){
             try {
-                InetAddress ip = InetAddress.getByName("172.30.185.180");
+                InetAddress ip = InetAddress.getByName("10.0.2.15");
                 s = new Socket(ip, 5000);
                 entrada = new DataInputStream(s.getInputStream());
                 salida = new DataOutputStream(s.getOutputStream());
